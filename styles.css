@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
@@ -15,6 +14,8 @@ body {
     align-items: center; /* 수평 중앙 정렬 */
     height: 100vh; /* 전체 화면 높이를 100%로 설정 */
     padding: 0 20px;
+    max-width: 1200px; /* 최대 너비 설정 (예: 1200px) */
+    margin: 0 auto; /* 화면 중앙에 배치 */
 }
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
@@ -25,12 +26,14 @@ body {
     align-items: center; /* 수평 중앙 정렬 */
     height: 100%; /* 화면 전체 높이를 사용하여 세로 중앙 정렬 유지 */
     width: 100%; /* 화면 너비를 꽉 채우도록 설정 */
+    max-width: 400px; /* 버튼을 담고 있는 컨테이너의 최대 너비 설정 */
 }
-
 /* 반응형 디자인 (모바일 화면) */
 @media (max-width: 600px) {
     body {
         padding: 0 10px;
+        width: 100%; /* 너비를 화면에 맞게 조정 */
+        max-width: 500px; /* 최대 너비 설정 */
     }
 
     header h1 {
@@ -73,6 +76,7 @@ body {
     /* .index-button-container에서 세로 중앙 정렬 유지 */
     .index-button-container {
         height: 100vh; /* 화면 전체 높이를 사용 */
+        max-width: 300px; /* 버튼 컨테이너의 최대 너비 제한 */
     }
 }
 
@@ -101,7 +105,7 @@ header {
 }
 
 select {
-    width: 150px; /* 고정된 너비 */
+    width: 200px; /* 고정된 너비 */
     height: 40px; /* 고정된 높이 */
     padding: 0x 15px;
     font-size: 1.1rem;
