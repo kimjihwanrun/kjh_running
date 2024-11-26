@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>범주 선택</title>
+    <title>마라톤 기록 검색</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>마라톤 기록 검색</h1>
+        <h1>RUNNING RECORD</h1>
     </header>
     <main>
-        <!-- 검색 범주 -->
         <div class="search-container">
-            <label for="year">년도:</label>
             <select id="year" onchange="updateResults()">
+                <option value="전체">전체</option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
             </select>
-
-            <label for="category">종목:</label>
             <select id="category" onchange="updateResults()">
+                <option value="전체">전체</option>
                 <option value="10k">10km</option>
                 <option value="half">하프</option>
                 <option value="full">풀코스</option>
             </select>
         </div>
-
-        <!-- 결과 표시 -->
         <div id="results-container">
             <ul id="marathon-list"></ul>
         </div>

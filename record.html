@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마라톤 기록</title>
+    <title>기록 상세</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="record-page">
     <header>
-        <h1>마라톤 기록</h1>
+        <h1 id="record-name"></h1> <!-- 마라톤 이름과 카테고리 표시 -->
     </header>
     <main>
-        <div class="marathon-details">
-            <img id="marathon-logo" src="" alt="마라톤 로고">
-            <h2 id="marathon-name"></h2>
-            <p id="marathon-distance"></p>
-            <p id="marathon-time"></p>
+        <h2 id="marathon-name"></h2>
+            <!-- RECORD 텍스트 -->
+            <p class="record-label">RECORD</p>
+            <!-- 기록 -->
+            <p id="record-time" class="record-value"></p>
         </div>
-        <button onclick="window.history.back()">돌아가기</button>
+        <!-- 돌아가기 버튼 -->
+        <button onclick="goBack()">돌아가기</button>
     </main>
     <footer>
         <p>@KJH_RUNNING</p>
     </footer>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById('marathon-name').textContent = params.get('name');
-        document.getElementById('marathon-time').textContent = `시간: ${params.get('time')}`;
-        document.getElementById('marathon-distance').textContent = `거리: ${params.get('distance')}`;
-        document.getElementById('marathon-logo').src = params.get('logo');
+        // URL 파라미터에서 값 가져오기
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const time = urlParams.get('time');
+        const distance = urlParams.get('distance');
+        const category = urlParams.get('category');
+        const logo = urlParams.get('logo');
+
+        // 페이지 로딩 시 데이터 표시
+        document.getElementById('record-name').textContent = `${name} (${category.toUpperCase()})`;
+        document.getElementById('marathon-name').textContent = name; // 마라톤 이름만
+        document.getElementById('record-time').textContent = time;
+        document.getElementById('record-distance').textContent = distance;
+
+        // 돌아가기 함수
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </body>
 </html>

@@ -11,10 +11,8 @@ body {
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 수직 중앙 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
     height: 100vh; /* 전체 화면 높이를 100%로 설정 */
-    text-align: center; /* 모든 텍스트 중앙 정렬 */
     padding: 0 20px;
 }
 
@@ -33,18 +31,19 @@ header {
 /* 검색 영역 */
 .search-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* 년도 / 종목 배너가 좌우로 나열되게 수정 */
     align-items: center;
     gap: 15px;
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
+    justify-content: center; /* 중앙 정렬 */
 }
 
 select {
-    width: 100%;
-    max-width: 300px;
-    padding: 12px 15px;
+    width: 200px; /* 고정된 너비 */
+    height: 40px; /* 고정된 높이 */
+    padding: 0x 15px;
     font-size: 1.1rem;
     border-radius: 8px;
     border: none;
@@ -63,7 +62,6 @@ select {
     select:hover {
         background-color: #ff6600;
     }
-
 /* 결과 리스트 */
 #results-container {
     display: flex;
@@ -115,10 +113,70 @@ select {
         text-align: center;
     }
 
+
+/* 전체 페이지 중앙 정렬 */
+.record-page main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 사용 */
+}
+
+/* 마라톤 이름과 카테고리 스타일 */
+.record-page #record-name {
+    font-size: 2rem;
+    color: #ff9800;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 마라톤 이름 (FULL, HALF 등) */
+.record-page #marathon-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff9800;
+    margin-top: 10px;
+    display: none;
+}
+/* RECORD 텍스트 스타일 */
+.record-page .record-label {
+    font-size: 3rem; /* 크기 크게 */
+    font-weight: bold;
+    color: #000; /* 검정색 */
+    margin-top: 30px;
+    text-align: center; /* 좌우 가운데 정렬 */
+}
+/* 기록과 거리 스타일 */
+.record-page .record-value {
+    font-size: 4rem; /* 기록과 거리 크게 */
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0; /* 상하 간격 */
+}
+
+/* 돌아가기 버튼 스타일 */
+.record-page button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* 버튼을 블록 요소로 만들어서 중앙 정렬 */
+    margin-left: auto; /* 수평 중앙 정렬 */
+    margin-right: auto; /* 수평 중앙 정렬 */
+}
+
+    .record-page button:hover {
+        background-color: #ff6600;
+    }
 /* 기록 페이지 */
 .marathon-details {
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 2000px;
 }
 
     .marathon-details img {
@@ -134,16 +192,20 @@ select {
         margin-bottom: 10px;
     }
 
+/* 버튼 스타일 */
 button {
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #ff9800;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
     border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s ease;
-    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    display: block; /* 버튼을 블록 요소로 만들어서 중앙 정렬 */
+    margin-left: auto; /* 수평 중앙 정렬 */
+    margin-right: auto; /* 수평 중앙 정렬 */
 }
 
     button:hover {
@@ -159,7 +221,7 @@ footer {
 }
 
     footer p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #ff9800;
     }
 
@@ -188,4 +250,12 @@ footer {
     button {
         font-size: 1rem;
     }
+}
+
+/* 인덱스 페이지에서 버튼 중앙 정렬 */
+.index-button-container {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 사용 */
 }
