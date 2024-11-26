@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KJH_MARTHON_RECORD.props" />
+</Project>

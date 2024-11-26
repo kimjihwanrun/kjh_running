@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마라톤 기록</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>마라톤 기록</h1>
+    </header>
+    <main>
+        <div class="marathon-details">
+            <img id="marathon-logo" src="" alt="마라톤 로고">
+            <h2 id="marathon-name"></h2>
+            <p id="marathon-distance"></p>
+            <p id="marathon-time"></p>
+        </div>
+        <button onclick="window.history.back()">돌아가기</button>
+    </main>
+    <footer>
+        <p>@KJH_RUNNING</p>
+    </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('marathon-name').textContent = params.get('name');
+        document.getElementById('marathon-time').textContent = `시간: ${params.get('time')}`;
+        document.getElementById('marathon-distance').textContent = `거리: ${params.get('distance')}`;
+        document.getElementById('marathon-logo').src = params.get('logo');
+    </script>
+</body>
+</html>

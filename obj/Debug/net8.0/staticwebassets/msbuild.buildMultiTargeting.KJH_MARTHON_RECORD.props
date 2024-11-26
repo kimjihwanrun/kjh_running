@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KJH_MARTHON_RECORD.props" />
+</Project>

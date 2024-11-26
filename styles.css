@@ -1,0 +1,191 @@
+﻿/* 공통 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    height: 100vh; /* 전체 화면 높이를 100%로 설정 */
+    text-align: center; /* 모든 텍스트 중앙 정렬 */
+    padding: 0 20px;
+}
+
+/* 헤더 스타일 */
+header {
+    margin-top: 30px;
+}
+
+    header h1 {
+        font-size: 3rem;
+        color: #ff9800;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+/* 검색 영역 */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff9800;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    text-align: center; /* 드롭다운의 텍스트 중앙 정렬 */
+}
+
+    select option {
+        text-align: center; /* 드롭다운 옵션의 텍스트 중앙 정렬 */
+    }
+
+    select:hover {
+        background-color: #ff6600;
+    }
+
+/* 결과 리스트 */
+#results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#marathon-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+    #marathon-list li {
+        background-color: #1f1f1f;
+        border-radius: 12px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+        #marathon-list li:hover {
+            background-color: #333;
+            transform: translateY(-5px);
+        }
+
+    #marathon-list img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    #marathon-list span {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+/* 기록 페이지 */
+.marathon-details {
+    text-align: center;
+    margin-top: 40px;
+}
+
+    .marathon-details img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .marathon-details p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+button {
+    background-color: #ff9800;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+    button:hover {
+        background-color: #ff6600;
+    }
+
+/* 사이트 하단 */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+    footer p {
+        font-size: 1.2rem;
+        color: #ff9800;
+    }
+
+/* 반응형 디자인 (모바일 화면) */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #marathon-list {
+        grid-template-columns: 1fr;
+    }
+
+        #marathon-list li {
+            padding: 12px;
+        }
+
+    button {
+        font-size: 1rem;
+    }
+}
