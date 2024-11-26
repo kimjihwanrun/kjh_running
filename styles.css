@@ -7,7 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
-    color: #ffffff;
+    color: #e0e0e0; /* 밝은 회색으로 텍스트 */
     display: flex;
     flex-direction: column;
     justify-content: center; /* 세로 중앙 정렬 */
@@ -50,7 +50,7 @@ body {
         width: 100%; /* 드롭다운 너비를 100%로 설정 */
         max-width: 300px; /* 최대 너비 설정 */
         height: 40px;
-        font-size: 1rem; /* 폰트 크기 줄이기 */
+        font-size: 0.9rem; /* 폰트 크기 줄이기 */
     }
 
     #marathon-list {
@@ -60,7 +60,7 @@ body {
 
         #marathon-list li {
             padding: 12px;
-            font-size: 1rem; /* 리스트 항목 폰트 크기 조정 */
+            font-size: 0.8rem; /* 리스트 항목 폰트 크기 조정 */
         }
 
     button {
@@ -70,7 +70,7 @@ body {
     }
 
     footer p {
-        font-size: 0.9rem; /* 푸터 폰트 크기 조정 */
+        font-size: 0.8rem; /* 푸터 폰트 크기 조정 */
     }
 
     /* .index-button-container에서 세로 중앙 정렬 유지 */
@@ -111,7 +111,7 @@ select {
     font-size: 1.1rem;
     border-radius: 8px;
     border: none;
-    background-color: #ff9800;
+    background-color: #1e88e5;
     color: #fff;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -124,7 +124,7 @@ select {
     }
 
     select:hover {
-        background-color: #ff6600;
+        background-color: 1565c0;
     }
 /* 결과 리스트 */
 #results-container {
@@ -147,7 +147,7 @@ select {
 }
 
     #marathon-list li {
-        background-color: #1f1f1f;
+        background-color: #3a4756;
         border-radius: 12px;
         padding: 15px;
         display: flex;
@@ -160,9 +160,9 @@ select {
     }
 
         #marathon-list li:hover {
-            background-color: #333;
-            transform: translateY(-5px);
+            background-color: #546e7a; /* 조금 더 밝은 회색 */
         }
+
 
     #marathon-list img {
         width: 60px;
@@ -172,7 +172,7 @@ select {
     }
 
     #marathon-list span {
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: bold;
         text-align: center;
     }
@@ -207,7 +207,7 @@ select {
 .record-page .record-label {
     font-size: 3rem; /* 크기 크게 */
     font-weight: bold;
-    color: #000; /* 검정색 */
+    color: #ffffff; /* 기본 흰색 */
     margin-top: 30px;
     text-align: center; /* 좌우 가운데 정렬 */
 }
@@ -223,10 +223,10 @@ select {
 .record-page button {
     margin-top: 30px;
     padding: 15px 30px;
-    background-color: #ff9800;
+    background-color: #1e88e5; /* 파란색 */
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -236,7 +236,7 @@ select {
 }
 
     .record-page button:hover {
-        background-color: #ff6600;
+        background-color: #1565c0; /* 어두운 파란색 */
     }
 /* 기록 페이지 */
 .marathon-details {
@@ -285,41 +285,6 @@ footer {
 }
 
     footer p {
-        font-size: 1rem;
-        color: #ff9800;
+        font-size: 0.8rem;
+        color: #90caf9; /* 밝은 파란색 */
     }
-
-/* 반응형 디자인 (모바일 화면) */
-/*@media (max-width: 600px) {
-    body {
-        padding: 0 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .search-container {
-        width: 100%;
-    }
-
-    #marathon-list {
-        grid-template-columns: 1fr;
-    }
-
-        #marathon-list li {
-            padding: 12px;
-        }
-
-    button {
-        font-size: 1rem;
-    }
-}*/
-
-/* 인덱스 페이지에서 버튼 중앙 정렬 */
-/*.index-button-container {
-    display: flex;
-    justify-content: center;*/ /* 수평 중앙 정렬 */
-    /*align-items: center;*/ /* 세로 중앙 정렬 */
-    /*height: 100vh;*/ /* 화면 전체 높이 사용 */
-/*}*/
