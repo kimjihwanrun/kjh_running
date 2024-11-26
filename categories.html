@@ -12,11 +12,13 @@
     </header>
     <main>
         <div class="search-container">
+            <!-- 년도 선택 -->
             <select id="year" onchange="updateResults()">
                 <option value="전체">전체</option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
             </select>
+            <!-- 카테고리 선택 -->
             <select id="category" onchange="updateResults()">
                 <option value="전체">전체</option>
                 <option value="10k">10K</option>
@@ -25,11 +27,16 @@
             </select>
         </div>
         <div id="results-container">
+            <!-- 마라톤 리스트 -->
             <ul id="marathon-list"></ul>
         </div>
+     
     </main>
     <footer>
-        <p>@KJH_RUNNING | VERSION 1.01</p>
+        <div class="footer-navigation">
+            <button class="back-button" onclick="goBack2()">User Select</button>
+        </div>
+        <p>@KJH_RUNNING | Version 1.01</p>
     </footer>
     <script src="script.js"></script>
 </body>
