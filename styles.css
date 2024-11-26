@@ -11,9 +11,69 @@ body {
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* 세로 중앙 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
     height: 100vh; /* 전체 화면 높이를 100%로 설정 */
     padding: 0 20px;
+}
+
+/* 인덱스 페이지에서 버튼 중앙 정렬 */
+.index-button-container {
+    display: flex;
+    flex-direction: column; /* 버튼을 세로로 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    height: 100%; /* 화면 전체 높이를 사용하여 세로 중앙 정렬 유지 */
+    width: 100%; /* 화면 너비를 꽉 채우도록 설정 */
+}
+
+/* 반응형 디자인 (모바일 화면) */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2rem; /* 헤더 폰트 크기 조정 */
+    }
+
+    .search-container {
+        width: 100%;
+        flex-direction: column; /* 세로로 나열되도록 변경 */
+        align-items: flex-start; /* 왼쪽 정렬 */
+    }
+
+    select {
+        width: 100%; /* 드롭다운 너비를 100%로 설정 */
+        max-width: 300px; /* 최대 너비 설정 */
+        height: 40px;
+        font-size: 1rem; /* 폰트 크기 줄이기 */
+    }
+
+    #marathon-list {
+        grid-template-columns: 1fr; /* 리스트가 한 열로 나열되도록 변경 */
+        padding: 0;
+    }
+
+        #marathon-list li {
+            padding: 12px;
+            font-size: 1rem; /* 리스트 항목 폰트 크기 조정 */
+        }
+
+    button {
+        font-size: 1rem; /* 버튼 폰트 크기 조정 */
+        padding: 10px 20px;
+        width: 100%; /* 버튼을 100% 너비로 설정 */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* 푸터 폰트 크기 조정 */
+    }
+
+    /* .index-button-container에서 세로 중앙 정렬 유지 */
+    .index-button-container {
+        height: 100vh; /* 화면 전체 높이를 사용 */
+    }
 }
 
 /* 헤더 스타일 */
@@ -226,7 +286,7 @@ footer {
     }
 
 /* 반응형 디자인 (모바일 화면) */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     body {
         padding: 0 10px;
     }
@@ -250,12 +310,12 @@ footer {
     button {
         font-size: 1rem;
     }
-}
+}*/
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
-.index-button-container {
+/*.index-button-container {
     display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    height: 100vh; /* 화면 전체 높이 사용 */
-}
+    justify-content: center;*/ /* 수평 중앙 정렬 */
+    /*align-items: center;*/ /* 세로 중앙 정렬 */
+    /*height: 100vh;*/ /* 화면 전체 높이 사용 */
+/*}*/
