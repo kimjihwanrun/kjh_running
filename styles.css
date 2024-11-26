@@ -105,7 +105,7 @@ header {
 }
 
 select {
-    width: 200px; /* 고정된 너비 */
+    width: 150px; /* 고정된 너비 */
     height: 40px; /* 고정된 높이 */
     padding: 0x 15px;
     font-size: 1.1rem;
