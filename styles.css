@@ -103,7 +103,7 @@ header h1 {
     color: #ff9800;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 50px;
+    margin-left: 75px;
 }
 /* Footer navigation 스타일 */
 .footer-navigation {
@@ -135,7 +135,7 @@ header h1 {
     flex-direction: row; /* 년도 / 종목 배너가 좌우로 나열되게 수정 */
     align-items: center;
     gap: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
     width: 100%;
     justify-content: center; /* 중앙 정렬 */
