@@ -27,45 +27,27 @@ window.onload = function () {
     // 기본 마라톤 데이터 표시
     updateResults();
 };
+
 // 동영상 오버레이 표시
 function showOverlay() {
-    // 페이지 처음 로드일 경우에만 동영상 표시
-    if (!sessionStorage.getItem("videoPlayed")) {
-        const overlay = document.getElementById("overlay");
-        const userVideo = document.getElementById("user-video");
+    const overlay = document.getElementById("overlay");
+    const userVideo = document.getElementById("user-video");
 
-        // 사용자 동영상 설정
-        userVideo.src = userVideos[user] || "assets/videos/default.mp4";
+    // 사용자 동영상 설정
+    userVideo.src = userVideos[user] || "assets/videos/default.mp4";
 
-        // 오버레이 표시
-        overlay.classList.add("show");
-        overlay.classList.remove("hidden");
+    // 오버레이 표시
+    overlay.classList.add("show");
+    overlay.classList.remove("hidden");
 
-        // 배경 흐림 효과 적용
-        document.body.classList.add("overlay-active");
-
-        // 동영상 끝났을 때 페이드아웃 시작
-        userVideo.onended = () => {
-            overlay.classList.remove("show");
-            setTimeout(() => {
-                overlay.classList.add("hidden");
-
-                // 배경 흐림 효과 제거
-                document.body.classList.remove("overlay-active");
-
-                // sessionStorage에 영상이 표시되었음을 기록
-                sessionStorage.setItem("videoPlayed", "true");
-
-                updateResults(); // 동영상 끝난 후 모든 리스트를 로드
-            }, 3000); // 페이드아웃 시간 (3초와 일치)
-        };
-
-        // 동영상 재생 시작
-        userVideo.play();
-    } else {
-        // sessionStorage에 'videoPlayed'가 설정되면, 바로 리스트를 로드
-        updateResults();
-    }
+    // 동영상 끝났을 때 페이드아웃 시작
+    userVideo.onended = () => {
+        overlay.classList.remove("show");
+        setTimeout(() => {
+            overlay.classList.add("hidden");
+            updateResults(); // 모든 리스트를 로드
+        }, 3000); // 페이드아웃 시간 (3초와 일치)
+    };
 }
 
 // 결과 업데이트
@@ -93,7 +75,9 @@ function updateResults() {
 
         item.appendChild(img);
         item.appendChild(text);
-        item.onclick = () => renderMarathonPage(marathon); // 클릭 시 해당 페이지로 이동
+
+        // 클릭 시 기록 페이지로 이동
+        item.onclick = () => renderMarathonPage(marathon);
 
         list.appendChild(item);
     });
