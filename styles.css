@@ -14,7 +14,7 @@ body {
     height: 100vh; /* 전체 화면 높이를 100%로 설정 */
     padding: 0 20px;
     max-width: 1200px; /* 최대 너비 설정 (예: 1200px) */
-    margin: 0 auto; /* 화면 중앙에 배치 */
+    margin: 0 auto; /* 화면 중앙에 배치 git 에서 수정한 부분 30px >> */   
 }
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
