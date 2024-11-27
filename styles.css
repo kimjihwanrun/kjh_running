@@ -276,7 +276,7 @@ select {
 
 /* 돌아가기 버튼 스타일 */
 .record-page button {
-    margin-top: 30px;
+    margin-top: 100px;
     padding: 15px 30px;
     background-color: #1e88e5; /* 파란색 */
     border: none;
