@@ -11,7 +11,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; /* 세로 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
     height: 100vh; /* 전체 화면 높이를 100%로 설정 */
     padding: 0 20px;
     max-width: 1200px; /* 최대 너비 설정 (예: 1200px) */
@@ -28,6 +27,7 @@ body {
     width: 100%; /* 화면 너비를 꽉 채우도록 설정 */
     max-width: 400px; /* 버튼을 담고 있는 컨테이너의 최대 너비 설정 */
 }
+
 /* 반응형 디자인 (모바일 화면) */
 @media (max-width: 600px) {
     body {
