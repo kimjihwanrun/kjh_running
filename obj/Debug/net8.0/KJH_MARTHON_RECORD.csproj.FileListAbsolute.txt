@@ -32,3 +32,4 @@ C:\Users\jihwa\source\repos\KJH_MARTHON_RECORD\KJH_MARTHON_RECORD\obj\Debug\net8
 C:\Users\jihwa\source\repos\KJH_MARTHON_RECORD\KJH_MARTHON_RECORD\obj\Debug\net8.0\KJH_MARTHON_RECORD.pdb
 C:\Users\jihwa\source\repos\KJH_MARTHON_RECORD\KJH_MARTHON_RECORD\obj\Debug\net8.0\KJH_MARTHON_RECORD.genruntimeconfig.cache
 C:\Users\jihwa\source\repos\KJH_MARTHON_RECORD\KJH_MARTHON_RECORD\obj\Debug\net8.0\ref\KJH_MARTHON_RECORD.dll
+C:\Users\jihwa\source\repos\KJH_MARTHON_RECORD\KJH_MARTHON_RECORD\obj\Debug\net8.0\KJH_MARTHON_RECORD.sourcelink.json

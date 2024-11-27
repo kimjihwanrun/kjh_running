@@ -4,18 +4,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
+    max-width: 500px; /* 모바일 너비 제한 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
-    color: #e0e0e0; /* 밝은 회색으로 텍스트 */
+    color: #e0e0e0;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* 세로 중앙 정렬 */
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
     align-items: center; /* 수평 중앙 정렬 */
-    height: 100vh; /* 전체 화면 높이를 100%로 설정 */
+    justify-content: flex-start; /* 상단부터 배치 */
+    height: 100vh;
     padding: 0 20px;
-    max-width: 1200px; /* 최대 너비 설정 (예: 1200px) */
-    margin: 0 auto; /* 화면 중앙에 배치 */
+    margin: 0 auto;
+}
+/* 메인 영역 */
+main {
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* 메인 영역이 여유 공간을 채우도록 설정 */
+    width: 100%;
 }
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
@@ -28,6 +38,7 @@ body {
     width: 100%; /* 화면 너비를 꽉 채우도록 설정 */
     max-width: 400px; /* 버튼을 담고 있는 컨테이너의 최대 너비 설정 */
 }
+
 /* 반응형 디자인 (모바일 화면) */
 @media (max-width: 600px) {
     body {
@@ -80,18 +91,21 @@ body {
     }
 }
 
-/* 헤더 스타일 */
+/* 헤더 스타일: 왼쪽 위 배치 git 으로 바꿈*/
 header {
-    margin-top: 30px;
+    width: 100%; /* 화면 전체 너비 */
+    text-align: center;
+    padding: 10px 20px; /* 헤더에 여백 추가 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
 }
 
     header h1 {
-        font-size: 3rem;
+        font-size: 2rem;
         color: #ff9800;
         font-weight: bold;
         letter-spacing: 2px;
+        margin-top: 40px;
     }
-
 /* Footer navigation 스타일 */
 .footer-navigation {
     display: flex;
@@ -122,8 +136,8 @@ header {
     flex-direction: row; /* 년도 / 종목 배너가 좌우로 나열되게 수정 */
     align-items: center;
     gap: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     justify-content: center; /* 중앙 정렬 */
 }
@@ -157,6 +171,7 @@ select {
     align-items: center;
     width: 100%;
 }
+
 #marathon-list {
     list-style: none;
     padding: 0;
@@ -191,7 +206,7 @@ select {
     #marathon-list li {
         background-color: #3a4756;
         border-radius: 12px;
-        padding: 15px;
+        padding: 5px; /* 기존15 */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -242,15 +257,15 @@ select {
     font-size: 2.5rem;
     font-weight: bold;
     color: #ff9800;
-    margin-top: 10px;
+    margin-top: 0px;
     display: none;
 }
 /* RECORD 텍스트 스타일 */
 .record-page .record-label {
-    font-size: 3rem; /* 크기 크게 */
+    font-size: 2.5rem; /* 크기 크게 */
     font-weight: bold;
     color: #ffffff; /* 기본 흰색 */
-    margin-top: 30px;
+    margin-top: 0px;
     text-align: center; /* 좌우 가운데 정렬 */
 }
 /* 기록과 거리 스타일 */
@@ -263,7 +278,7 @@ select {
 
 /* 돌아가기 버튼 스타일 */
 .record-page button {
-    margin-top: 30px;
+    margin-top: 100px;
     padding: 15px 30px;
     background-color: #1e88e5; /* 파란색 */
     border: none;
@@ -282,7 +297,7 @@ select {
     }
 /* 기록 페이지 */
 .marathon-details {
-    margin-top: 2000px;
+    margin-top: 0px;
 }
 
     .marathon-details img {
@@ -306,7 +321,7 @@ button {
     border: none;
     color: white;
     font-size: 1rem;
-    width:300px;
+    width: 300px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -332,3 +347,37 @@ footer {
         color: #90caf9; /* 밝은 파란색 */
     }
 
+
+/* hidden 상태 */
+.hidden {
+    display: none;
+}
+
+
+/* 전체 화면 오버레이 */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s ease, visibility 3s ease; /* 페이드아웃 시간 변경 (3초로 설정) */
+}
+
+    #overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+/* 동영상 스타일 */
+#user-video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
