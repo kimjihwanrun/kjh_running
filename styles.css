@@ -255,15 +255,15 @@ select {
     font-size: 2.5rem;
     font-weight: bold;
     color: #ff9800;
-    margin-top: 10px;
+    margin-top: 0px;
     display: none;
 }
 /* RECORD 텍스트 스타일 */
 .record-page .record-label {
-    font-size: 3rem; /* 크기 크게 */
+    font-size: 2.5rem; /* 크기 크게 */
     font-weight: bold;
     color: #ffffff; /* 기본 흰색 */
-    margin-top: 30px;
+    margin-top: 0px;
     text-align: center; /* 좌우 가운데 정렬 */
 }
 /* 기록과 거리 스타일 */
