@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body {
+    max-width: 600px; /* 모바일 너비 제한 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
     color: #e0e0e0;
@@ -23,7 +24,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-grow: 1; /* 메인 영역이 여유 공간을 채우도록 설정 */
-    width: 50%;
+    width: 100%;
 }
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
@@ -102,7 +103,7 @@ header h1 {
     color: #ff9800;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 50px;
 }
 /* Footer navigation 스타일 */
 .footer-navigation {
