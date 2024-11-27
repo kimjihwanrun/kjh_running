@@ -75,8 +75,8 @@ function goBack2() {
 
 // 사용자별 이미지를 설정
 const userImages = {
-    kimjihwan: "assets/images/kimjihwan.jpg",
-    kimsangjin: "assets/images/kimsangjin.jpg"
+    kimjihwan: "assets/kimjihwan.jpg",
+    kimsangjin: "assets/kimsangjin.jpg"
 };
 
 // URL에서 user 파라미터 가져오기
@@ -95,7 +95,7 @@ function showDialog() {
     const userImage = document.getElementById("user-image");
 
     // 사용자별 이미지 설정
-    userImage.src = userImages[user] || "assets/images/default.jpg";
+    userImage.src = userImages[user] || "assets/default.jpg";
     userImage.alt = `${user}의 이미지`;
 
     // 다이얼로그 페이드인 효과 추가
