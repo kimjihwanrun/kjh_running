@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    max-width: 600px; /* 모바일 너비 제한 */
+    max-width: 500px; /* 모바일 너비 제한 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
     color: #e0e0e0;
@@ -93,7 +93,7 @@ main {
 /* 헤더 스타일: 왼쪽 위 배치 git 으로 바꿈*/
 header {
     width: 100%; /* 화면 전체 너비 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
+    text-align: center; /* 텍스트 왼쪽 정렬 */
     padding: 10px 20px; /* 헤더에 여백 추가 */
     box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
 }
@@ -103,7 +103,6 @@ header h1 {
     color: #ff9800;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-left: 75px;
     margin-top:10px;
 }
 /* Footer navigation 스타일 */
