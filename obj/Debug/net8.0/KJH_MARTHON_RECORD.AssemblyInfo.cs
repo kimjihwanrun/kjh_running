@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KJH_MARTHON_RECORD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a6291d3459437be23a0eaf379699729480fb5f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55f4ed578bf2dd883a06c81cd6fbeb3b8390223b")]
 [assembly: System.Reflection.AssemblyProductAttribute("KJH_MARTHON_RECORD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KJH_MARTHON_RECORD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
