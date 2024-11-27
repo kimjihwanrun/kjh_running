@@ -1,8 +1,11 @@
 // 마라톤 기록 데이터
 const marathons = [
-    { user: "kimjihwan", name: "2024 서울 마라톤", year: "2024", category: "full", time: "4:35:12", distance: "42.195km", logo: "assets/logos/seoul-logo.png" },
-    { user: "kimjihwan", name: "2024 jtbc 마라톤", year: "2023", category: "half", time: "2:10:45", distance: "21.1km", logo: "assets/logos/jtbc-logo.png" },
-    { user: "kimjihwan", name: "2023 대구 마라톤", year: "2024", category: "10k", time: "00:55:32", distance: "10km", logo: "assets/logos/daegu-logo.png" },
+    { user: "kimjihwan", name: "2024 서울 마라톤", year: "2024", category: "full", time: "DNF", distance: "42.195km", logo: "assets/logos/seoul-logo.png" },
+    { user: "kimjihwan", name: "2024 jtbc 마라톤", year: "2024", category: "full", time: "DNF", distance: "21.1km", logo: "assets/logos/jtbc-logo.png" },
+    { user: "kimjihwan", name: "2024 대구 마라톤", year: "2024", category: "full", time: "DNF", distance: "10km", logo: "assets/logos/daegu-logo.png" },
+    { user: "kimjihwan", name: "2023 서울 마라톤", year: "2023", category: "full", time: "DNF", distance: "42.195km", logo: "assets/logos/seoul-logo.png" },
+    { user: "kimjihwan", name: "2023 jtbc 마라톤", year: "2023", category: "full", time: "DNF", distance: "21.1km", logo: "assets/logos/jtbc-logo.png" },
+    { user: "kimjihwan", name: "2023 대구 마라톤", year: "2023", category: "10k", time: "00:55:32", distance: "10km", logo: "assets/logos/daegu-logo.png" },
     { user: "kimsangjin", name: "서울 마라톤", year: "2024", category: "full", time: "5:00:00", distance: "42.195km", logo: "assets/logos/seoul-logo.png" },
     { user: "kimsangjin", name: "대구 마라톤", year: "2023", category: "half", time: "2:20:00", distance: "21.1km", logo: "assets/logos/daegu-logo.png" },
 ];

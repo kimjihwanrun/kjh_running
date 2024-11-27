@@ -381,6 +381,5 @@ footer {
     left: 0;
     width: 100vw; /* 화면의 가로 크기 */
     height: 100vh; /* 화면의 세로 크기 */
-    object-fit: cover; /* 비율을 맞추고 자르기 */
     background-color: black;
 }
