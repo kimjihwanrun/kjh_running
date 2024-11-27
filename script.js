@@ -71,3 +71,76 @@ function renderMarathonPage(marathon) {
 function goBack2() {
     window.location.href = 'index.html';
 }
+
+
+// 사용자별 이미지를 설정
+const userImages = {
+    kimjihwan: "assets/images/kimjihwan.jpg",
+    kimsangjin: "assets/images/kimsangjin.jpg"
+};
+
+// URL에서 user 파라미터 가져오기
+const urlParams = new URLSearchParams(window.location.search);
+const user = urlParams.get("user");
+
+// 첫 로드 시 다이얼로그 표시 및 결과 업데이트
+window.onload = () => {
+    showDialog();
+    updateResults();
+};
+
+// 다이얼로그 표시
+function showDialog() {
+    const dialog = document.getElementById("user-dialog");
+    const userImage = document.getElementById("user-image");
+
+    // 사용자별 이미지 설정
+    userImage.src = userImages[user] || "assets/images/default.jpg";
+    userImage.alt = `${user}의 이미지`;
+
+    // 다이얼로그 페이드인 효과 추가
+    dialog.classList.remove("hidden");
+    setTimeout(() => dialog.classList.add("show"), 10); // Timeout으로 트랜지션 시작
+}
+
+// 다이얼로그 닫기
+function closeDialog() {
+    const dialog = document.getElementById("user-dialog");
+    dialog.classList.remove("show");
+    setTimeout(() => dialog.classList.add("hidden"), 500); // 페이드아웃 후 hidden 처리
+}
+
+// 결과 업데이트 (기존 기능)
+function updateResults() {
+    const year = document.getElementById('year').value;
+    const category = document.getElementById('category').value;
+
+    const filtered = marathons.filter(m =>
+        m.user === user &&
+        (year === '전체' || m.year === year) &&
+        (category === '전체' || m.category === category)
+    );
+
+    const list = document.getElementById('marathon-list');
+    list.innerHTML = "";
+
+    filtered.forEach(marathon => {
+        const item = document.createElement('li');
+        const img = document.createElement('img');
+        img.src = marathon.logo;
+        img.alt = marathon.name;
+
+        const text = document.createElement('span');
+        text.textContent = marathon.name;
+
+        item.appendChild(img);
+        item.appendChild(text);
+        item.onclick = () => renderMarathonPage(marathon);
+
+        list.appendChild(item);
+    });
+}
+
+function goBack2() {
+    window.location.href = 'index.html';
+}
