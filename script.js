@@ -7,7 +7,6 @@ const marathons = [
     { user: "kimsangjin", name: "대구 마라톤", year: "2023", category: "half", time: "2:20:00", distance: "21.1km", logo: "assets/logos/daegu-logo.png" },
     // 추가 데이터...
 ];
-
 // 사용자별 이미지를 설정
 const userImages = {
     kimjihwan: "assets/kimjihwan.jpg",
@@ -41,8 +40,10 @@ function showDialog() {
 // 다이얼로그 닫기
 function closeDialog() {
     const dialog = document.getElementById("user-dialog");
+
+    // 다이얼로그 페이드아웃 후 숨김 처리
     dialog.classList.remove("show");
-    setTimeout(() => dialog.classList.add("hidden"), 500); // 페이드아웃 후 hidden 처리
+    setTimeout(() => dialog.classList.add("hidden"), 500); // 0.5초 후 hidden 처리
 }
 
 // 결과 업데이트
@@ -86,4 +87,3 @@ function renderMarathonPage(marathon) {
 function goBack2() {
     window.location.href = 'index.html';
 }
-
