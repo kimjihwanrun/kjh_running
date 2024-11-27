@@ -104,6 +104,7 @@ header h1 {
     font-weight: bold;
     letter-spacing: 2px;
     margin-left: 75px;
+    margin-top:10px;
 }
 /* Footer navigation 스타일 */
 .footer-navigation {
@@ -136,7 +137,7 @@ header h1 {
     align-items: center;
     gap: 15px;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 100%;
     justify-content: center; /* 중앙 정렬 */
 }
@@ -295,7 +296,7 @@ select {
     }
 /* 기록 페이지 */
 .marathon-details {
-    margin-top: 2000px;
+    margin-top: 0px;
 }
 
     .marathon-details img {
