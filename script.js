@@ -19,14 +19,21 @@ const userVideos = {
 
 // 페이지 로드 시 초기화
 window.onload = function () {
-    // 동영상 재생
-    if (user) {
-        showOverlay();
+    // 'videoPlayed'가 localStorage에 없으면 처음 방문으로 간주
+    if (!localStorage.getItem('videoPlayed')) {
+        // 동영상 재생
+        if (user) {
+            showOverlay();
+        }
+
+        // 'videoPlayed' 상태를 localStorage에 저장
+        localStorage.setItem('videoPlayed', 'true');
     }
 
     // 기본 마라톤 데이터 표시
     updateResults();
 };
+
 
 // 동영상 오버레이 표시
 function showOverlay() {
@@ -100,3 +107,4 @@ function renderMarathonPage(marathon) {
 function goBack2() {
     window.location.href = "index.html";
 }
+

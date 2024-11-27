@@ -8,11 +8,23 @@
 </head>
 <body>
     <main class="index-button-container">
-        <button onclick="location.href='categories.html?user=kimjihwan'">KIM JIHWAN RECORD</button>
-        <button onclick="location.href='categories.html?user=kimsangjin'">KIM SANGJIN RECORD</button>
+        <button onclick="goToCategories('kimjihwan')">KIM JIHWAN RECORD</button>
+        <button onclick="goToCategories('kimsangjin')">KIM SANGJIN RECORD</button>
     </main>
     <footer>
         <p>@KJH_RUNNING | Version 1.01</p>
     </footer>
+
+    <script>
+        // 페이지 로드 시 videoPlayed 상태 초기화
+        window.onload = function () {
+            localStorage.removeItem('videoPlayed');
+        };
+
+        // categories.html로 이동하는 함수
+        function goToCategories(user) {
+            location.href = `categories.html?user=${user}`;
+        }
+    </script>
 </body>
 </html>
