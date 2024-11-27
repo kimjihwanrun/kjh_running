@@ -366,7 +366,7 @@ footer {
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 3s ease, visibility 3s ease; /* 페이드아웃 시간 변경 (3초로 설정) */
+    transition: opacity 1s ease, visibility 1s ease; /* 페이드아웃 시간 변경 (3초로 설정) */
 }
 
 #overlay.show {

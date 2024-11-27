@@ -46,7 +46,7 @@ function showOverlay() {
         setTimeout(() => {
             overlay.classList.add("hidden");
             updateResults(); // 모든 리스트를 로드
-        }, 3000); // 페이드아웃 시간 (3초와 일치)
+        }, 1000); // 페이드아웃 시간 (3초와 일치)
     };
 }
 
