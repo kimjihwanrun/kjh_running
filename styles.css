@@ -204,7 +204,7 @@ select {
     #marathon-list li {
         background-color: #3a4756;
         border-radius: 12px;
-        padding: 15px;
+        padding: 5px;  /* 기존15 */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
