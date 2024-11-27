@@ -5,17 +5,25 @@
     box-sizing: border-box;
 }
 body {
-     align-items: center; /* 수평 중앙 정렬 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
-    color: #e0e0e0; /* 밝은 회색으로 텍스트 */
+    color: #e0e0e0;
     display: flex;
-    flex-direction: column;
-    justify-content: center; /* 세로 중앙 정렬 */
-    height: 100vh; /* 전체 화면 높이를 100%로 설정 */
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: flex-start; /* 상단부터 배치 */
+    height: 100vh;
     padding: 0 20px;
-    max-width: 1200px; /* 최대 너비 설정 (예: 1200px) */
-    margin: 0 auto; /* 화면 중앙에 배치 git 에서 수정한 부분 30px >> */   
+    margin: 0 auto;
+}
+/* 메인 영역 */
+main {
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* 메인 영역이 여유 공간을 채우도록 설정 */
+    width: 100%;
 }
 
 /* 인덱스 페이지에서 버튼 중앙 정렬 */
@@ -83,12 +91,10 @@ body {
 
 /* 헤더 스타일: 왼쪽 위 배치 git 으로 바꿈*/
 header {
-    position: absolute; /* 절대 위치 지정 */
-    top: 10px; /* 위쪽 여백 */
-    left: 10px; /* 왼쪽 여백 */
-    margin: 0; /* 기본 마진 제거 */
+    width: 100%; /* 화면 전체 너비 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
-    width: auto; /* 너비를 내용에 맞게 설정 */
+    padding: 10px 20px; /* 헤더에 여백 추가 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
 }
 
 header h1 {
@@ -96,9 +102,8 @@ header h1 {
     color: #ff9800;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0; /* 기본 마진 제거 */
+    margin: 0;
 }
-
 /* Footer navigation 스타일 */
 .footer-navigation {
     display: flex;
