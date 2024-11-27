@@ -93,7 +93,7 @@ main {
 /* 헤더 스타일: 왼쪽 위 배치 git 으로 바꿈*/
 header {
     width: 100%; /* 화면 전체 너비 */
-    text-align: center; /* 텍스트 왼쪽 정렬 */
+    text-align: center;
     padding: 10px 20px; /* 헤더에 여백 추가 */
     box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
 }
