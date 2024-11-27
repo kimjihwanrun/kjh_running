@@ -40,7 +40,7 @@ main {
 }
 
 /* 반응형 디자인 (모바일 화면) */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     body {
         padding: 0 10px;
         width: 100%; /* 너비를 화면에 맞게 조정 */
