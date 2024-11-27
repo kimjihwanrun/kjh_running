@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body {
+     align-items: center; /* 수평 중앙 정렬 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
     color: #e0e0e0; /* 밝은 회색으로 텍스트 */
