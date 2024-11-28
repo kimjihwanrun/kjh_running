@@ -1,4 +1,9 @@
-﻿/* 공통 스타일 */
+﻿/* Google Fonts에서 Montserrat와 Roboto 폰트 추가 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* 기본 스타일 */
 * {
     margin: 0;
     padding: 0;
@@ -6,380 +11,197 @@
 }
 
 body {
-    max-width: 500px; /* 모바일 너비 제한 */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #2e3a4a, #232d39); /* 그라디언트 배경 */
-    color: #e0e0e0;
-    display: flex;
-    flex-direction: column; /* 요소들을 수직으로 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    justify-content: flex-start; /* 상단부터 배치 */
-    height: 100vh;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-/* 메인 영역 */
-main {
-    display: flex;
-    flex-direction: column; /* 수직 정렬 */
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1; /* 메인 영역이 여유 공간을 채우도록 설정 */
-    width: 100%;
-}
-
-/* 인덱스 페이지에서 버튼 중앙 정렬 */
-.index-button-container {
-    display: flex;
-    flex-direction: column; /* 버튼을 세로로 정렬 */
-    justify-content: center; /* 세로 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    height: 100%; /* 화면 전체 높이를 사용하여 세로 중앙 정렬 유지 */
-    width: 100%; /* 화면 너비를 꽉 채우도록 설정 */
-    max-width: 400px; /* 버튼을 담고 있는 컨테이너의 최대 너비 설정 */
-}
-
-/* 반응형 디자인 (모바일 화면) */
-@media (max-width: 500px) {
-    body {
-        padding: 0 10px;
-        width: 100%; /* 너비를 화면에 맞게 조정 */
-        max-width: 500px; /* 최대 너비 설정 */
-    }
-
-    header h1 {
-        font-size: 2rem; /* 헤더 폰트 크기 조정 */
-    }
-
-    .search-container {
-        width: 100%;
-        flex-direction: column; /* 세로로 나열되도록 변경 */
-        align-items: flex-start; /* 왼쪽 정렬 */
-    }
-
-    select {
-        width: 100%; /* 드롭다운 너비를 100%로 설정 */
-        max-width: 300px; /* 최대 너비 설정 */
-        height: 40px;
-        font-size: 0.9rem; /* 폰트 크기 줄이기 */
-    }
-
-    #marathon-list {
-        grid-template-columns: 1fr; /* 리스트가 한 열로 나열되도록 변경 */
-        padding: 0;
-    }
-
-        #marathon-list li {
-            padding: 12px;
-            font-size: 0.8rem; /* 리스트 항목 폰트 크기 조정 */
-        }
-
-    button {
-        font-size: 1rem; /* 버튼 폰트 크기 조정 */
-        padding: 10px 20px;
-        width: 100%; /* 버튼을 100% 너비로 설정 */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* 푸터 폰트 크기 조정 */
-    }
-
-    /* .index-button-container에서 세로 중앙 정렬 유지 */
-    .index-button-container {
-        height: 100vh; /* 화면 전체 높이를 사용 */
-        max-width: 300px; /* 버튼 컨테이너의 최대 너비 제한 */
-    }
-}
-
-/* 헤더 스타일: 왼쪽 위 배치 git 으로 바꿈*/
-header {
-    width: 100%; /* 화면 전체 너비 */
-    text-align: center;
-    padding: 10px 20px; /* 헤더에 여백 추가 */
-    box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
-}
-
-    header h1 {
-        font-size: 2rem;
-        color: #ff9800;
-        font-weight: bold;
-        letter-spacing: 2px;
-        margin-top: 40px;
-    }
-/* Footer navigation 스타일 */
-.footer-navigation {
-    display: flex;
-    justify-content: center; /* 버튼을 가운데 정렬 */
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-/* 뒤로가기 버튼 스타일 */
-.back-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px; /* 좌우 여백 */
-}
-
-    .back-button:hover {
-        background-color: #0056b3;
-    }
-
-/* 검색 영역 */
-.search-container {
-    display: flex;
-    flex-direction: row; /* 년도 / 종목 배너가 좌우로 나열되게 수정 */
-    align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    justify-content: center; /* 중앙 정렬 */
-}
-
-select {
-    width: 150px; /* 고정된 너비 */
-    height: 40px; /* 고정된 높이 */
-    padding: 0 15px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: none;
-    background-color: #1e88e5;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
-    text-align: center; /* 드롭다운의 텍스트 중앙 정렬 */
-}
-
-    select option {
-        text-align: center; /* 드롭다운 옵션의 텍스트 중앙 정렬 */
-    }
-
-    select:hover {
-        background-color: #1565c0;
-    }
-/* 결과 리스트 */
-#results-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-#marathon-list {
-    list-style: none;
-    padding: 0;
+    font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
     margin: 0;
-    width: 100%;
-    max-width: 350px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 10px;
-    /* 스크롤 가능하도록 추가 */
-    max-height: 400px; /* 리스트 영역의 최대 높이 제한 */
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    scrollbar-width: thin; /* 스크롤바 얇게 (Firefox 전용) */
-    scrollbar-color: #546e7a #2e3a4a; /* 스크롤바 색상 (Firefox 전용) */
+    padding: 0;
 }
 
-    /* 스크롤바 스타일링 (Chrome, Edge, Safari) */
-    #marathon-list::-webkit-scrollbar {
-        width: 8px; /* 스크롤바 너비 */
-    }
-
-    #marathon-list::-webkit-scrollbar-thumb {
-        background-color: #546e7a; /* 스크롤바 색상 */
-        border-radius: 4px; /* 스크롤바 둥글게 */
-    }
-
-    #marathon-list::-webkit-scrollbar-track {
-        background-color: #2e3a4a; /* 스크롤바 트랙 배경 */
-    }
-
-    #marathon-list li {
-        background-color: #3a4756;
-        border-radius: 12px;
-        padding: 5px; /* 기존15 */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-        #marathon-list li:hover {
-            background-color: #546e7a; /* 조금 더 밝은 회색 */
-        }
-
-
-    #marathon-list img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-
-    #marathon-list span {
-        font-size: 1rem;
-        font-weight: bold;
-        text-align: center;
-    }
-
-
-/* 전체 페이지 중앙 정렬 */
-.record-page main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 세로 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    height: 100vh; /* 화면 전체 높이 사용 */
-}
-
-/* 마라톤 이름과 카테고리 스타일 */
-.record-page #record-name {
-    font-size: 2rem;
-    color: #ff9800;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-/* 마라톤 이름 (FULL, HALF 등) */
-.record-page #marathon-name {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #ff9800;
-    margin-top: 0px;
-    display: none;
-}
-/* RECORD 텍스트 스타일 */
-.record-page .record-label {
-    font-size: 2.5rem; /* 크기 크게 */
-    font-weight: bold;
-    color: #ffffff; /* 기본 흰색 */
-    margin-top: 0px;
-    text-align: center; /* 좌우 가운데 정렬 */
-}
-/* 기록과 거리 스타일 */
-.record-page .record-value {
-    font-size: 4rem; /* 기록과 거리 크게 */
-    color: #ffffff;
-    font-weight: bold;
-    margin: 10px 0; /* 상하 간격 */
-}
-
-/* 돌아가기 버튼 스타일 */
-.record-page button {
-    margin-top: 100px;
-    padding: 15px 30px;
-    background-color: #1e88e5; /* 파란색 */
-    border: none;
-    color: white;
-    font-size: 1.0rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block; /* 버튼을 블록 요소로 만들어서 중앙 정렬 */
-    margin-left: auto; /* 수평 중앙 정렬 */
-    margin-right: auto; /* 수평 중앙 정렬 */
-}
-
-    .record-page button:hover {
-        background-color: #1565c0; /* 어두운 파란색 */
-    }
-/* 기록 페이지 */
-.marathon-details {
-    margin-top: 0px;
-}
-
-    .marathon-details img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    .marathon-details p {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-/* 버튼 스타일 */
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ff9800;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    width: 300px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block; /* 버튼을 블록 요소로 만들어서 중앙 정렬 */
-    margin-left: auto; /* 수평 중앙 정렬 */
-    margin-right: auto; /* 수평 중앙 정렬 */
-}
-
-    button:hover {
-        background-color: #ff6600;
-    }
-
-/* 사이트 하단 */
-footer {
-    margin-top: auto;
-    padding: 20px 0;
+/* Hero Section */
+.hero {
     text-align: center;
-    width: 100%;
+    position: relative;
+    background-color: #fff;
+    padding: 20px 10px;
 }
 
-    footer p {
-        font-size: 0.8rem;
-        color: #90caf9; /* 밝은 파란색 */
+.hero-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.intro {
+    margin-top: 15px;
+    text-align: center;
+}
+
+    .intro h1 {
+        font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+        font-size: 2.2em;
+        margin-bottom: 10px;
+        color: #3b8cc2; /* 파란 계열 */
     }
 
-
-/* hidden 상태 */
-.hidden {
-    display: none;
+/* 개인 정보 그리드 */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    text-align: center;
+    justify-items: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
-/* 전체 화면 오버레이 */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+.info-item {
+    padding: 10px;
+}
+
+.info-title {
+    font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+    font-size: 1.2em;
+    color: #3b8cc2; /* 파란 계열 */
+    margin-bottom: 5px;
+}
+
+.info-content {
+    font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+    font-size: 1.1em;
+    color: #333; /* 검정 계열 */
+}
+
+/* 1km Pace Ranking */
+.pace-ranking {
+    background-color: #fff;
+    padding: 30px 15px;
+    margin-top: 30px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+    .pace-ranking h2 {
+        font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #3b8cc2; /* 파란 계열 */
+    }
+
+.ranking {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.rank-entry {
+    background-color: #e7f3fe; /* 부드러운 파란색 */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 대회별 기록 */
+.events {
+    background-color: #fff;
+    padding: 30px 15px;
+    margin-top: 30px;
+    text-align: center; /* 중앙 정렬 */
+}
+
+    .events h2 {
+        font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+        font-size: 1em;
+        margin-bottom: 20px;
+        color: #3b8cc2; /* 파란 계열 */
+    }
+
+.event-slider {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease, visibility 1s ease; /* 페이드아웃 시간 변경 (3초로 설정) */
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    justify-content: center; /* 가로 중앙 정렬 */
 }
 
-#overlay.show {
-    opacity: 1;
-    visibility: visible;
+.event {
+    min-width: 250px;
+    background-color: #eaf3f7; /* 부드러운 파란색 배경 */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
 }
 
-/* 동영상 스타일 */
-#user-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw; /* 화면의 가로 크기 */
-    height: 100vh; /* 화면의 세로 크기 */
-    background-color: black;
+.event-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* 모바일 디바이스 (최대 600px) */
+@media (max-width: 600px) {
+    /* Hero Section */
+    .hero-image {
+        max-height: 250px;
+    }
+
+    .intro h1 {
+        font-size: 1.6em;
+    }
+
+    /* 개인 정보 그리드 */
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-title {
+        font-size: 1.1em;
+    }
+
+    .info-content {
+        font-size: 0.9em;
+    }
+
+    /* 1km Pace Ranking */
+    .pace-ranking h2 {
+        font-size: 1.6em;
+    }
+
+    .ranking {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* 대회별 기록 */
+    .events h2 {
+        font-size: 1.6em;
+    }
+
+    .event-slider {
+        flex-wrap: nowrap;
+    }
+
+    .event {
+        min-width: 200px;
+        padding: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+    }
 }
