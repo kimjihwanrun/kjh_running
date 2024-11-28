@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
 /* 기본 스타일 */
 * {
     margin: 0;
@@ -90,8 +89,8 @@ body {
     }
 
 .ranking {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column; /* 위에서 아래로 나열 */
     gap: 20px;
     text-align: center;
 }
@@ -101,7 +100,12 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* 카드 너비를 화면의 80%로 설정 */
+    max-width: 400px; /* 카드 최대 너비를 400px로 설정 */
+    margin: 0 auto; /* 가로 중앙 정렬 */
 }
+
+
 
 /* 대회별 기록 */
 .events {
@@ -113,7 +117,7 @@ body {
 
     .events h2 {
         font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
-        font-size: 1em;
+        font-size: 2em;
         margin-bottom: 20px;
         color: #3b8cc2; /* 파란 계열 */
     }
@@ -135,7 +139,14 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start;
+    font-family: 'Poppins', sans-serif; /* 이벤트 텍스트에 Poppins 적용 */
 }
+
+    .event p {
+        font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
+        font-size: 0.7em; /* 글씨 크기 조정 */
+        color: #333; /* 검정 계열 */
+    }
 
 .event-logo {
     width: 100%;
