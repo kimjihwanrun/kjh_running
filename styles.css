@@ -69,7 +69,8 @@ body {
 
 .info-content {
     font-family: 'Poppins', sans-serif; /* 귀여운 Poppins 폰트 */
-    font-size: 1.1em;
+    font-size: 1.3em;
+    font-weight: bold;
     color: #333; /* 검정 계열 */
 }
 
