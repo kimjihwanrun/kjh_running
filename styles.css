@@ -85,15 +85,28 @@ body {
 }
 
     .record-card h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #333;
+        color: #fff;
+  
     }
 
     .record-card p {
-        font-size: 1.2rem;
+        font-size: 1.rem;
         margin: 5px 0;
-        color: #555;
+        color: #ecf0f1;
+    }
+
+    .record-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #fcff00;
+    }
+
+    .record-card p2 {
+        font-size: 1.rem;
+        margin: 5px 0;
+        color: #fcff00;
     }
 
 /* Scroll Animation */
@@ -273,3 +286,44 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* 대회 기록과 대회 사진 섹션 사이의 공간 */
+.space-between-sections {
+    height: 100px;
+    background-color: #f0f0f0; /* 진한 흰색 */
+}
+
+/* 거리별 그라데이션 색상 */
+.record-card[data-distance="10"] {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* 42km에 대한 그라데이션 */
+}
+
+.record-card[data-distance="21"] {
+    background: linear-gradient(to right, #84fab0, #8fd3f4); /* 21km에 대한 그라데이션 (연한 파스텔 그린+블루) */
+}
+
+.record-card[data-distance="42"] {
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* 42km에 대한 그라데이션 (핑크+주황 계열) */
+}
+
+/* PB 스티커 */
+.record-card.pb {
+    position: relative; /* 부모 카드가 relative여야 자식 요소가 절대 위치를 가질 수 있음 */
+}
+
+    .record-card.pb::before {
+        content: "PB"; /* 스티커 텍스트 */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #ff5733; /* PB 색상 (원하는 색으로 변경) */
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* 그림자 추가 */
+    }
+
+
