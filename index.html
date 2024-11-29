@@ -1,88 +1,120 @@
 ﻿<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marathon Profile</title>
+    <title>Marathon Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>KIM SANGJIN</h1>
-                <p class="subtitle">Marathon Enthusiast</p>
-            </div>
-            <img src="your-photo.jpg" alt="Profile Image" class="hero-image">
-        </section>
+    <!-- Main Section -->
+    <section id="main" class="main-section">
+        <div class="content">
+            <h1>Kim Jihwan</h1>
+            <p>KJH_Running</p>
+        </div>
+    </section>
 
-        <!-- 개인 정보 Section -->
-        <section class="info-section">
-            <div class="info-grid">
-                <div class="info-item">
-                    <h3 class="info-title">Country</h3>
-                    <p class="info-content">KOREA</p>
+    <section id="race-records" class="race-records-section">
+        <h3>대회 기록</h3>
+        <div class="divider"></div> <!-- 구분 띠 -->
+        <div class="records-container">
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>DNF</strong> </p>
+
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+            <div class="record-card scroll-fade">
+                <h3>2023 동아마라톤</h3>
+                <p><strong>Pace:</strong> 5'12"/km</p>
+                <p><strong>Record:</strong> 3:45:22</p>
+            </div>
+        </div>
+    </section>
+    <section id="race-photos" class="race-photos-section">
+        <h3>대회 사진</h3>
+        <div class="divider"></div> <!-- 구분 띠 -->
+        <!-- 사진과 '더보기' 버튼을 감싸는 컨테이너 -->
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="gallery-item scroll-fade">
+                    <img src="1.png" alt="Seoul Marathon 2023" class="clickable-img">
                 </div>
-                <div class="info-item">
-                    <h3 class="info-title">Date of Birth</h3>
-                    <p class="info-content">1963-10-10</p>
+                <div class="gallery-item scroll-fade">
+                    <img src="2.png" alt="Busan Half Marathon 2023" class="clickable-img">
                 </div>
-                <div class="info-item">
-                    <h3 class="info-title">Debut</h3>
-                    <p class="info-content">2015</p>
+                <div class="gallery-item scroll-fade">
+                    <img src="3.jpg" alt="Incheon Marathon 2022" class="clickable-img">
                 </div>
-                <div class="info-item">
-                    <h3 class="info-title">Personal Best</h3>
-                    <p class="info-content">3:33:00 (2024 JTBC)</p>
+                <div class="gallery-item scroll-fade">
+                    <img src="4.jpg" alt="Jeju Marathon 2022" class="clickable-img">
+                </div>
+                <div class="gallery-item more hidden scroll-fade">
+                    <img src="5.jpg" alt="Race 5" class="clickable-img">
+                </div>
+                <div class="gallery-item more hidden scroll-fade">
+                    <img src="6.jpg" alt="Race 6" class="clickable-img">
+                </div>
+                <div class="gallery-item more hidden scroll-fade">
+                    <img src="7.jpg" alt="Race 7" class="clickable-img">
                 </div>
             </div>
-        </section>
-
-        <!-- 1km Pace Ranking -->
-        <section class="pace-ranking">
-            <h2>1km Pace Ranking</h2>
-            <div class="ranking">
-                <div class="rank-entry">
-                    <p>1st: 3:30/km</p>
-                </div>
-                <div class="rank-entry">
-                    <p>2nd: 3:35/km</p>
-                </div>
-                <div class="rank-entry">
-                    <p>3rd: 3:40/km</p>
-                </div>
+            <div class="more-container">
+                <a href="#" class="load-more-link">...더보기</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 대회별 기록 Section -->
-        <section class="events">
-            <h2>Competition Records</h2>
-            <div class="event-grid">
-                <div class="event">
-                    <img src="event-logo1.jpg" alt="Event 1 Logo" class="event-logo">
-                    <p>2023 Marathon: 2:35:00</p>
-                </div>
-                <div class="event">
-                    <img src="event-logo2.jpg" alt="Event 2 Logo" class="event-logo">
-                    <p>2022 Marathon: 2:45:00</p>
-                </div>
-                <div class="event">
-                    <img src="event-logo3.jpg" alt="Event 3 Logo" class="event-logo">
-                    <p>2021 Marathon: 2:55:00</p>
-                </div>
-                <div class="event">
-                    <img src="event-logo4.jpg" alt="Event 4 Logo" class="event-logo">
-                    <p>2020 Marathon: 3:00:00</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 KIM SANGJIN. All rights reserved.</p>
-        </footer>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 KJH_Running. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal to view the image in larger size -->
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImg">
     </div>
 
     <script src="script.js"></script>
