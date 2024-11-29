@@ -140,7 +140,7 @@ body {
 /* 대회 사진 섹션 */
 .race-photos-section {
     padding: 50px 20px;
-    background-image: url('Are You Run-ready.png');
+    background-image: url('wall.jpg');
     background-size: cover;
     text-align: center;
     font-family: 'Arial', sans-serif; /* 글씨체 확실히 설정 */
@@ -164,7 +164,7 @@ body {
 
 /* '더보기' 텍스트 스타일 */
 .load-more-link {
-    color: #ecf0f1; /* 링크 색상 */
+    color: #474f5b; /* 링크 색상 */
     text-decoration: none; /* 밑줄 없애기 */
     font-size: 22px; /* 글씨 크기 */
     font-weight: bold; /* 글씨 두껍게 */
@@ -251,7 +251,7 @@ body {
 /* 대회 사진 섹션 */
 .race-photos-section {
     padding: 50px 20px;
-    background-image: url('Are You Run-ready.png');
+    background-image: url('wall.jpg');
     background-size: cover;
     text-align: center;
     font-family: 'Arial', sans-serif; /* 글씨체 확실히 설정 */
